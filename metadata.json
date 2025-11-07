@@ -1,0 +1,5 @@
+{
+  "name": "Pôstny manažér",
+  "description": "Interaktívny plánovač pôstov, ktorý vám pomôže vytvoriť personalizovaný kalendár na základe odporúčaní z AI analýzy tela. Vizualizujte si svoje pôsty, sledujte pokrok a získajte tipy pre váš cirkadiánny rytmus.",
+  "requestFramePermissions": []
+}

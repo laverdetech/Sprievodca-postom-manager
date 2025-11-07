@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pôstny manažér</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': 'rgb(var(--color-primary) / <alpha-value>)',
+              'brand-secondary': 'rgb(var(--color-secondary) / <alpha-value>)',
+              'brand-bg': '#111827',
+              'brand-surface': '#1F2937',
+              'brand-text': '#E5E7EB',
+              'brand-text-muted': '#9CA3AF',
+            },
+            keyframes: {
+              'fade-in': {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              'scale-in': {
+                '0%': { opacity: '0', transform: 'scale(0.95)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              'flash-start': {
+                '0%, 100%': { boxShadow: '0 0 0 0px transparent' },
+                '50%': { boxShadow: '0 0 0 4px rgb(var(--color-primary) / 0.5)' },
+              },
+              'flash-end': {
+                '0%, 100%': { boxShadow: '0 0 0 0px transparent' },
+                '50%': { boxShadow: '0 0 0 4px rgb(var(--color-secondary) / 0.5)' },
+              }
+            },
+            animation: {
+              'fade-in': 'fade-in 0.3s ease-out forwards',
+              'scale-in': 'scale-in 0.3s ease-out forwards',
+              'flash-start': 'flash-start 0.7s ease-in-out',
+              'flash-end': 'flash-end 0.7s ease-in-out',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      :root {
+        --color-primary: 56 189 248; /* default: sky */
+        --color-secondary: 129 140 248; /* default: indigo */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-100 dark:bg-brand-bg text-gray-800 dark:text-brand-text transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
